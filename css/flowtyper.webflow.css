@@ -99,6 +99,7 @@
   -webkit-flex: 0 auto;
   -ms-flex: 0 auto;
   flex: 0 auto;
+  color: #fff;
   cursor: pointer;
 }
 
@@ -216,7 +217,7 @@
 }
 
 .flow-link._2 {
-  color: #080706;
+  color: #fff;
   line-height: 27px;
 }
 
