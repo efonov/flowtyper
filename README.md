@@ -1,0 +1,2 @@
+# flowtyper
+Type—faster.
