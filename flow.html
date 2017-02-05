@@ -87,12 +87,7 @@
 
     function submitFlow() {
       console.log("saved!");
-      var val = document.getElementById("flow").value;
-      val = String.trim();
-      if (val === "")
-        val = "(empty note)";
-
-      localStorage.setItem('flow'+(Number(localStorage.getItem('curId'))-1), val);
+      localStorage.setItem('flow'+(Number(localStorage.getItem('curId'))-1), document.getElementById("flow").value);
       window.location.href = "index.html";
     }
 
