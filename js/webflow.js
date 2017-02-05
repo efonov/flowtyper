@@ -4351,5 +4351,6 @@ Webflow.require('ix').init([
   {"slug":"load","name":"Load","value":{"style":{},"triggers":[{"type":"load","selector":".leave-flow-bar","descend":true,"stepsA":[{"opacity":1,"transition":"transform 200 ease 0, opacity 200 ease 0"}],"stepsB":[]}]}},
   {"slug":"initial-invisibility","name":"Initial Invisibility","value":{"style":{"opacity":0},"triggers":[]}},
   {"slug":"initial-invisibility-2","name":"Initial Invisibility 2","value":{"style":{"opacity":0,"x":"100vw","y":"0px","z":"0px"},"triggers":[]}},
-  {"slug":"load-home","name":"Load Home","value":{"style":{},"triggers":[{"type":"load","selector":".home-container","stepsA":[],"stepsB":[]}]}}
+  {"slug":"load-home","name":"Load Home","value":{"style":{},"triggers":[{"type":"load","selector":".home-container","stepsA":[],"stepsB":[]}]}},
+  {"slug":"overview-zoom","name":"Overview Zoom","value":{"style":{},"triggers":[{"type":"click","selector":".flow-link","descend":true,"preserve3d":true,"stepsA":[{"opacity":0,"transition":"opacity 200 ease 0"},{"x":"100vw","y":"0px","z":"0px"}],"stepsB":[{"x":"0px","y":"0px","z":"0px"},{"opacity":1,"transition":"opacity 200 ease 0"}]},{"type":"click","selector":".zoom","preserve3d":true,"stepsA":[{"x":"0px","y":"0px","z":"0px"},{"opacity":1,"transition":"opacity 200 ease 0"}],"stepsB":[{"opacity":0,"transition":"opacity 200 ease 0"},{"x":"100vw","y":"0px","z":"0px"}]}]}}
 ]);
