@@ -53,7 +53,7 @@ body {
   overflow: visible;
   width: 70%;
   height: 10000vh;
-  margin-top: 60vh;
+  margin-top: 57vh;
   padding-top: 15vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -378,10 +378,7 @@ body {
   top: 0px;
   right: 0px;
   z-index: 150;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   height: 100vh;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -559,6 +556,7 @@ body {
 
 .journal-title {
   width: 100%;
+  margin-bottom: 5vh;
   font-size: 5vw;
   line-height: 100%;
 }
