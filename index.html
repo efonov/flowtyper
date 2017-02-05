@@ -43,46 +43,108 @@
     <div class="page-list">
       <div class="new-flow-container w-container">
         <div class="new-flow-link">
-          <a class="new-flow w-inline-block" data-ix="new-flow" href="flow.html">
+          <a onClick="addText()" class="new-flow w-inline-block" data-ix="new-flow" href="flow.html">
             <div>&nbsp;new flow&nbsp;</div>
           </a>
         </div>
       </div>
     </div>
-    <div class="_2 home-container">
+    <div id="listDiv" class="_2 home-container">
       <div class="owner-parent">
         <div class="journal-title">
           <div>Leia's Journal</div>
         </div>
       </div>
-      <div class="flow-item">
+    </div>
         <div class="the-flow" data-ix="the-flow">
-          <div class="the-flow-box">
-            <h1 class="the-flow-title">12/12/17</h1>
-            <div class="the-flow-text w-richtext">
-              <p>This is some text inside of a div block. This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.</p>
-            </div>
-          </div>
-          <div class="x" data-ix="x">
-            <div class="white-line"></div>
-            <div class="_2 white-line"></div>
-          </div>
+      <div class="the-flow-box">
+        <h1 class="the-flow-title" id="dateTitle">12/12/17</h1>
+        <div class="the-flow-text w-richtext">
+          <p id="longText">Sample text</p>
         </div>
-        <a class="flow-link w-inline-block" data-ix="flow-link" href="#">
-          <div class="flow-row w-row">
-            <div class="date w-col w-col-2">
-              <div>12/12/17</div>
-            </div>
-            <div class="title w-col w-col-10">
-              <div>Privet Thomas Kak Dela? :D</div>
-            </div>
-          </div>
-        </a>
+      </div>
+      <div class="x" data-ix="x">
+        <div class="white-line"></div>
+        <div class="_2 white-line"></div>
       </div>
     </div>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
   <script src="js/webflow.js" type="text/javascript"></script>
+    <script>
+  function addText(){
+
+	  localStorage.setItem('flow'+localStorage.getItem('curId'), 'I like trains');
+    var date = new Date();
+    var dateString = (date.getMonth()+1)+"/"+date.getDate()+"/"+date.getFullYear();
+    console.log(dateString);
+    localStorage.setItem('flowdate'+localStorage.getItem('curId'), dateString);
+    localStorage.setItem('curId', Number(localStorage.getItem('curId'))+1);
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+   init();
+  });
+
+  function init() {
+      //CLEAR LOCAL STORAGE
+      //USE WITH CAUTION
+
+    //localStorage.clear();
+
+      //UNCOMMENT SOON
+      //SERIOUSLY
+
+
+    if (localStorage.getItem('curId') === null)
+      localStorage.setItem('curId', 0);
+    loopThruStorage();
+  }
+  
+  function loopThruStorage(){
+    var num = Number(localStorage.getItem('curId')) - 1;
+    do {
+      var text = localStorage.getItem('flow'+num);
+      var date = localStorage.getItem('flowdate'+num);
+      
+      if (text === null || date === null)
+        break;
+
+      console.log(Number(localStorage.getItem('curId')));
+      var parent = document.getElementById('listDiv');
+      appendStringAsNodes(document.getElementById("listDiv"), '<div class="flow-item"> <a onClick="setParagraphText(this)" id="'+ num + '" class="flow-link w-inline-block" data-ix="flow-link" href="#"> <div class="flow-item w-row"> <div class="date w-col w-col-4"> <div id="date' + num + '">12/12/17</div> </div> <div class="title w-col w-col-8"> <div id="text' + num + '">Privet Thomas Kak Dela? :D</div> </div> </div> </a> </div>');
+      console.log(date);
+
+      var newText = text.substring(0, 25);
+      if (newText.length < text.length)
+        newText += "...";
+      
+      document.getElementById('text'+num).innerText = newText;
+      document.getElementById('date'+num).innerText = date;
+      num--;
+    }
+    while (text !== null || date !== null);
+  }
+
+  function setParagraphText(element) {
+      var num = element.getAttribute("id");
+      document.getElementById('longText').innerText = localStorage.getItem('flow'+num);
+      document.getElementById('dateTitle').innerText = localStorage.getItem('flowdate'+num);
+  }
+  
+  function appendStringAsNodes(element, html) {
+    var frag = document.createDocumentFragment(),
+        tmp = document.createElement('body'), child;
+    tmp.innerHTML = html;
+    // Append elements in a loop to a DocumentFragment, so that the browser does
+    // not re-render the document for each node
+    while (child = tmp.firstChild) {
+        frag.appendChild(child);
+    }
+    element.appendChild(frag); // Now, append all elements at once
+    frag = tmp = null;
+}
+</script>
   <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
 </body>
 </html>
