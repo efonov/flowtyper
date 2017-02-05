@@ -41,7 +41,7 @@
 }
 
 .home-container._2 {
-  overflow: scroll;
+  overflow: visible;
   height: 40%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
