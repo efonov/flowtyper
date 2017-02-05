@@ -12,7 +12,15 @@ body {
   top: 0px;
   right: 0px;
   z-index: 50;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 60px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   background-color: #304040;
   box-shadow: 0 0 50px -5px #080706;
   -webkit-perspective: 1px;
@@ -27,6 +35,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  width: 70%;
   margin-bottom: 0px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -39,11 +48,12 @@ body {
 }
 
 .home-container._2 {
-  position: relative;
+  position: absolute;
   z-index: 20;
   overflow: visible;
-  height: 1000vh;
-  margin-top: 10vh;
+  width: 70%;
+  height: 10000vh;
+  margin-top: 60vh;
   padding-top: 15vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -60,6 +70,10 @@ body {
 
 .home-container._2._3 {
   z-index: 20;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-top: 15vh;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -233,8 +247,8 @@ body {
 
 .flow-link {
   overflow: visible;
-  width: 80%;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   font-family: 'Josefin Sans', sans-serif;
   color: #080706;
   font-size: 27px;
@@ -275,7 +289,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   overflow: visible;
-  width: 70vw;
+  width: 80%;
   margin-bottom: 10px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -312,13 +326,23 @@ body {
 }
 
 .date {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   overflow: hidden;
+  padding-right: 0px;
+  padding-left: 0px;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-align-self: flex-start;
   -ms-flex-item-align: start;
   align-self: flex-start;
   font-family: Lato, sans-serif;
   font-size: 80%;
-  line-height: 50px;
+  line-height: 200%;
   font-weight: 700;
   text-align: left;
 }
@@ -332,7 +356,7 @@ body {
   font-family: Lato, sans-serif;
   color: #080706;
   font-size: 80%;
-  line-height: 50px;
+  line-height: 200%;
   font-weight: 300;
   text-align: left;
 }
@@ -354,7 +378,10 @@ body {
   top: 0px;
   right: 0px;
   z-index: 150;
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   height: 100vh;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
@@ -504,17 +531,17 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 70vw;
+  width: 80%;
   margin-bottom: 2vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   font-family: Lato, sans-serif;
   color: #080706;
   font-size: 60px;
@@ -531,8 +558,9 @@ body {
 }
 
 .journal-title {
-  width: 80%;
-  font-size: 45px;
+  width: 100%;
+  font-size: 5vw;
+  line-height: 100%;
 }
 
 .confirm {
@@ -610,6 +638,12 @@ body {
   text-decoration: none;
 }
 
+.support {
+  width: 80vw;
+  height: 1px;
+  background-color: #fff;
+}
+
 html.w-mod-js *[data-ix="flow-link"] {
   opacity: 0.8;
 }
@@ -630,6 +664,18 @@ html.w-mod-js *[data-ix="initial-invisibility-2"] {
   -webkit-transform: translate(100vw, 0px);
   -ms-transform: translate(100vw, 0px);
   transform: translate(100vw, 0px);
+}
+
+@media (max-width: 991px) {
+  .home-container._2 {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-container._2 {
+    width: 100%;
+  }
 }
 
 @media (max-width: 479px) {
