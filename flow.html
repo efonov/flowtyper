@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Sun Feb 05 2017 07:32:22 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun Feb 05 2017 11:50:13 GMT+0000 (UTC)  -->
 <html data-wf-page="58964207f29bebaa63a00095" data-wf-site="58963bc47e7eea00192d6890">
 <head>
   <meta charset="utf-8">
@@ -23,35 +23,38 @@
     });
   </script>
   <script src="js/modernizr.js" type="text/javascript"></script>
-  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/favicon-2.png" rel="apple-touch-icon">
 </head>
-<body>
+<body class="flow-body">
   <div class="menu-section">
     <div class="home-container w-container">
-      <div class="home-menu">
+      <div class="home-menu" data-ix="load">
         <a class="menu-link w-inline-block" href="index.html">
-          <div class="flowtyper">flowtyper.</div>
+          <div class="_1 flowtyper">flow</div>
+          <div class="_2 flowtyper">typer.</div>
         </a>
-        <div class="leave-flow-bar">
-          <a class="_2 menu-link w-inline-block" data-ix="sample-button">
-            <div class="_2 flow-link">[sample]</div>
+        <div class="leave-flow-bar" data-ix="initial-invisibility">
+          <a class="_2 _6 menu-link w-inline-block" data-ix="sample-button">
+            <div class="_2 flow-link">overview</div>
           </a>
-          <a class="_2 menu-link w-inline-block" data-ix="exit-button" href="index.html">
-            <div class="_2 flow-link">[exit]</div>
-          </a>
+          <a class="_2 menu-link w-inline-block" data-ix="exit-button"></a>
+          <div class="_2 menu-link" data-ix="exit-button">
+            <div class="_2 flow-link">finish</div>
+            <a class="confirm w-inline-block" data-ix="initial-invisibility-2" href="index.html">
+              <div>confirm</div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="flow-space">
     <div class="w-form">
-      <form data-name="Email Form" id="email-form" name="email-form">
+      <form data-name="Email Form" id="wf-form-Email-Form" name="wf-form-Email-Form">
         <input class="flow w-input" data-name="Flow" id="Flow" maxlength="256" name="Flow" type="text">
       </form>
-      <div class="w-form-done">
-        <div>Thank you! Your submission has been received!</div>
-      </div>
+      <div class="success-message w-form-done"></div>
       <div class="w-form-fail">
         <div>Oops! Something went wrong while submitting the form</div>
       </div>

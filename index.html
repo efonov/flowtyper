@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--  This site was created in Webflow. http://www.webflow.com -->
-<!--  Last Published: Sun Feb 05 2017 07:32:22 GMT+0000 (UTC)  -->
+<!--  Last Published: Sun Feb 05 2017 11:50:13 GMT+0000 (UTC)  -->
 <html data-wf-page="58963bc47e7eea00192d6891" data-wf-site="58963bc47e7eea00192d6890">
 <head>
   <meta charset="utf-8">
@@ -19,15 +19,17 @@
     });
   </script>
   <script src="js/modernizr.js" type="text/javascript"></script>
-  <link href="https://daks2k3a4ib2z.cloudfront.net/img/favicon.ico" rel="shortcut icon" type="image/x-icon">
-  <link href="https://daks2k3a4ib2z.cloudfront.net/img/webclip.png" rel="apple-touch-icon">
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/favicon-2.png" rel="apple-touch-icon">
 </head>
 <body>
+  <div class="background"></div>
   <div class="menu-section">
     <div class="home-container w-container">
-      <div class="home-menu">
+      <div class="home-menu" data-ix="load-home">
         <a class="menu-link w-inline-block" href="index.html">
-          <div class="flowtyper">flowtyper.</div>
+          <div class="_1 flowtyper">flow</div>
+          <div class="_2 flowtyper">typer.</div>
         </a>
         <a class="_3 menu-link w-inline-block" href="#">
           <div class="menu-link-line"></div>
@@ -38,32 +40,44 @@
     </div>
   </div>
   <div class="flow-list-section">
-    <a class="_4 flow-link w-inline-block" href="flow.html">
-      <div>[new flow]</div>
-    </a>
-    <div class="_2 home-container w-container">
-      <div class="flow-item">
-        <div class="the-flow" data-ix="the-flow">
-          <div class="the-flow-box">
-            <h1 class="the-flow-title">Privet Thomas Kak Dela?</h1>
-            <div class="the-flow-date">12/12/17</div>
-            <div class="the-flow-text">This is some text inside of a div block. This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.</div>
-          </div>
-          <div class="x" data-ix="x">
-            <div class="white-line"></div>
-            <div class="_2 white-line"></div>
+    <div class="page-list">
+      <div class="new-flow-container w-container">
+        <div class="new-flow-link">
+          <a class="new-flow w-inline-block" data-ix="new-flow" href="flow.html">
+            <div>&nbsp;new flow&nbsp;</div>
+          </a>
+        </div>
+      </div>
+      <div class="_2 _3 home-container w-container">
+        <div class="owner-parent">
+          <div class="journal-title">
+            <div>Leia's Journal</div>
           </div>
         </div>
-        <a class="flow-link w-inline-block" data-ix="flow-link" href="#">
-          <div class="flow-item w-row">
-            <div class="date w-col w-col-4">
-              <div>12/12/17</div>
+        <div class="flow-item">
+          <div class="the-flow" data-ix="the-flow">
+            <div class="the-flow-box">
+              <h1 class="the-flow-title">12/12/17</h1>
+              <div class="the-flow-text w-richtext">
+                <p>This is some text inside of a div block. This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.This is some text inside of a div block.</p>
+              </div>
             </div>
-            <div class="title w-col w-col-8">
-              <div>Privet Thomas Kak Dela? :D</div>
+            <div class="x" data-ix="x">
+              <div class="white-line"></div>
+              <div class="_2 white-line"></div>
             </div>
           </div>
-        </a>
+          <a class="flow-link w-inline-block" data-ix="flow-link" href="#">
+            <div class="flow-row w-row">
+              <div class="date w-col w-col-2">
+                <div>12/12/17</div>
+              </div>
+              <div class="title w-col w-col-10">
+                <div>Privet Thomas Kak Dela? :D</div>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
